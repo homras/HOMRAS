@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ka" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOMRAS - პროფესიონალური ონლაინ პლატფორმა ხელოსნებისა და მომხმარებელთა დასაკავშირებლად საქართველოში">
+    <title>HOMRAS - იპოვე სანდო ხელოსანი</title>
+    
+    <!-- CSS ფაილები -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome იქონება -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <h1>HOMRAS</h1>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active" data-page="home">მთავარი</a></li>
+                    <li class="nav-item"><a href="#how-it-works" class="nav-link" data-page="how-it-works">როგორ მუშაობს</a></li>
+                    <li class="nav-item"><a href="#jobs" class="nav-link" data-page="jobs">სამუშაოები</a></li>
+                    <li class="nav-item"><a href="#handymen" class="nav-link" data-page="handymen">ხელოსნები</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link" data-page="pricing">ფასები</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link" data-page="about">ჩვენ შესახებ</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="language-select">
+                            <option value="ka">ქართული</option>
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <button class="btn btn-outline" id="loginBtn">შესვლა</button>
+                        <button class="btn btn-primary" id="registerBtn">რეგისტრაცია</button>
+                    </div>
+                    
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <div class="user-avatar" id="userAvatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="dropdown-content" id="userDropdown">
+                            <a href="#" id="dashboardLink"><i class="fas fa-tachometer-alt"></i> დეშბორდი</a>
+                            <a href="#" id="profileLink"><i class="fas fa-user"></i> პროფილი</a>
+                            <a href="#" id="myJobsLink"><i class="fas fa-briefcase"></i> ჩემი სამუშაოები</a>
+                            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> გამოსვლა</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section page-section active">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">იპოვე სანდო ხელოსანი თქვენი სახლისთვის</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">დაუკავშირდით სანდო სანტექნიკოსებს, ელექტრიკოსებს, შემკეთებლებს და დამლაგებლებს ბათუმსა და მთელ საქართველოში</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" id="postJobBtn">
+                        <i class="fas fa-plus-circle"></i> განათავსე სამუშაო
+                    </button>
+                    <button class="btn btn-secondary btn-lg" id="findJobBtn">
+                        <i class="fas fa-search"></i> იპოვე სამუშაო
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p data-i18n="stats.verified">დამოწმებული ხელოსანი</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2,000+</h3>
+                        <p data-i18n="stats.completed">დასრულებული პროექტი</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.8</h3>
+                        <p data-i18n="stats.rating">საშუალო რეიტინგი</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-tools"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section page-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howItWorks.title">როგორ მუშაობს HOMRAS</h2>
+            <p class="section-subtitle" data-i18n="howItWorks.subtitle">3 მარტივი ნაბიჯი სანდო ხელოსნის პოვნისთვის</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 data-i18n="howItWorks.step1.title">აღწერე სამუშაო</h3>
+                    <p data-i18n="howItWorks.step1.desc">შეავსე მარტივი ფორმა: რა გჭირდება, სად და როდის</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-i18n="howItWorks.step2.title">აირჩიე ხელოსანი</h3>
+                    <p data-i18n="howItWorks.step2.desc">მიიღე შეთავაზებები დამოწმებული ხელოსნებისგან</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-i18n="howItWorks.step3.title">დაასრულე და შეაფასე</h3>
+                    <p data-i18n="howItWorks.step3.desc">დაასრულე სამუშაო და დატოვე შეფასება ხელოსანზე</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Listing Section -->
+    <section id="jobs" class="jobs-section page-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="jobs.recent">ბოლოს დამატებული სამუშაოები</h2>
+            <p class="section-subtitle" data-i18n="jobs.subtitle">აქტუალური განცხადებები ხელოსნებისთვის</p>
+            
+            <div class="jobs-filter">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all" data-i18n="filter.all">ყველა კატეგორია</option>
+                    <option value="plumbing" data-i18n="filter.plumbing">სანტექნიკა</option>
+                    <option value="electrical" data-i18n="filter.electrical">ელექტრიკა</option>
+                    <option value="repair" data-i18n="filter.repair">რემონტი</option>
+                    <option value="cleaning" data-i18n="filter.cleaning">დასუფთავება</option>
+                </select>
+                
+                <select id="cityFilter" class="filter-select">
+                    <option value="all" data-i18n="filter.allCities">ყველა ქალაქი</option>
+                    <option value="batumi">ბათუმი</option>
+                    <option value="tbilisi">თბილისი</option>
+                    <option value="kutaisi">ქუთაისი</option>
+                </select>
+                
+                <input type="text" id="searchInput" placeholder="ძებნა..." class="filter-input">
+            </div>
+            
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Jobs will be loaded here dynamically -->
+            </div>
+            
+            <button class="btn btn-primary btn-block mt-4" id="loadMoreJobs" style="display: none;">მეტი სამუშაოს ნახვა</button>
+        </div>
+    </section>
+
+    <!-- Handymen Section -->
+    <section id="handymen" class="handymen-section page-section">
+        <div class="container">
+            <h2 class="section-title">ხელოსნები</h2>
+            <p class="section-subtitle">იპოვეთ დამოწმებული ხელოსნები თქვენს რეგიონში</p>
+            <div class="handymen-grid" id="handymenGrid">
+                <!-- Handymen will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section page-section">
+        <div class="container">
+            <h2 class="section-title">ფასები</h2>
+            <p class="section-subtitle">გამჭვირვალე და ხელმისაწვდომი ფასები</p>
+            <div class="pricing-plans">
+                <!-- Pricing plans content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section page-section">
+        <div class="container">
+            <h2 class="section-title">ჩვენ შესახებ</h2>
+            <p class="section-subtitle">HOMRAS - თქვენი სანდო პარტნიორი სახლის რემონტში</p>
+            <!-- About content -->
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="auth.login">შესვლა</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail" data-i18n="auth.email">ელ.ფოსტა</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword" data-i18n="auth.password">პაროლი</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="auth.login">შესვლა</button>
+                </form>
+                <p class="modal-footer-text">
+                    <span data-i18n="auth.noAccount">არ გაქვთ ანგარიში?</span>
+                    <a href="#" id="showRegister" data-i18n="auth.register">რეგისტრაცია</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="auth.register">რეგისტრაცია</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerEmail" data-i18n="auth.email">ელ.ფოსტა</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword" data-i18n="auth.password">პაროლი</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerRole" data-i18n="auth.registerAs">რეგისტრაცია როგორც</label>
+                        <select id="registerRole">
+                            <option value="customer" data-i18n="auth.customer">დამკვეთი</option>
+                            <option value="handyman" data-i18n="auth.handyman">ხელოსანი</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="auth.register">რეგისტრაცია</button>
+                </form>
+                <p class="modal-footer-text">
+                    <span data-i18n="auth.haveAccount">უკვე გაქვთ ანგარიში?</span>
+                    <a href="#" id="showLogin" data-i18n="auth.login">შესვლა</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Job Modal -->
+    <div class="modal" id="postJobModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="postJob.title">ახალი სამუშაოს განცხადება</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="postJobForm">
+                    <div class="form-group">
+                        <label for="jobTitle" data-i18n="postJob.titleField">სამუშაოს სახელი</label>
+                        <input type="text" id="jobTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jobCategory" data-i18n="postJob.category">კატეგორია</label>
+                        <select id="jobCategory" required>
+                            <option value="plumbing" data-i18n="category.plumbing">სანტექნიკა</option>
+                            <option value="electrical" data-i18n="category.electrical">ელექტრიკა</option>
+                            <option value="repair" data-i18n="category.repair">რემონტი</option>
+                            <option value="cleaning" data-i18n="category.cleaning">დასუფთავება</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jobDescription" data-i18n="postJob.description">აღწერა</label>
+                        <textarea id="jobDescription" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jobBudget" data-i18n="postJob.budget">ბიუჯეტი (₾)</label>
+                            <input type="number" id="jobBudget" min="0" step="10">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jobCity" data-i18n="postJob.city">ქალაქი</label>
+                            <select id="jobCity" required>
+                                <option value="batumi">ბათუმი</option>
+                                <option value="tbilisi">თბილისი</option>
+                                <option value="kutaisi">ქუთაისი</option>
+                                <option value="other" data-i18n="postJob.other">სხვა</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jobAddress" data-i18n="postJob.address">მისამართი</label>
+                        <input type="text" id="jobAddress" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jobPhotos" data-i18n="postJob.photos">ფოტოები (არასავალდებულო)</label>
+                        <input type="file" id="jobPhotos" accept="image/*" multiple>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="postJob.submit">განცხადების გამოქვეყნება</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HOMRAS</h3>
+                    <p data-i18n="footer.description">პლატფორმა ხელოსნებისა და მომხმარებელთა დასაკავშირებლად საქართველოში</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.links">ბმულები</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">მთავარი</a></li>
+                        <li><a href="#how-it-works" data-i18n="nav.howItWorks">როგორ მუშაობს</a></li>
+                        <li><a href="#jobs" data-i18n="nav.jobs">სამუშაოები</a></li>
+                        <li><a href="#handymen" data-i18n="nav.handymen">ხელოსნები</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.services">სერვისები</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="category.plumbing">სანტექნიკა</a></li>
+                        <li><a href="#" data-i18n="category.electrical">ელექტრიკა</a></li>
+                        <li><a href="#" data-i18n="category.repair">რემონტი</a></li>
+                        <li><a href="#" data-i18n="category.cleaning">დასუფთავება</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">კონტაქტი</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> info@homras.ge</li>
+                        <li><i class="fas fa-phone"></i> +995 123 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ბათუმი, საქართველო</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 HOMRAS. <span data-i18n="footer.rights">ყველა უფლება დაცულია.</span></p>
+                <div class="footer-links">
+                    <a href="#" data-i18n="footer.privacy">კონფიდენციალურობა</a>
+                    <a href="#" data-i18n="footer.terms">წესები და პირობები</a>
+                    <a href="admin/index.html" data-i18n="footer.admin">ადმინ პანელი</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript ფაილები -->
+    <script src="main.js"></script>
+    <script src="auth.js"></script>
+    <script src="jobs.js"></script>
+    
+    <!-- API Base URL -->
+    <script>
+        // დეპლოიმენტისას ეს URL შეიცვლება
+        const API_BASE_URL = 'https://homras.onrender.com'; // შეცვალე შენი production API-ით (localhost არ მუშაობს Netlify-ზე)
+    </script>
+</body>
+</html>
